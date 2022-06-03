@@ -29,7 +29,7 @@ def setup(hass: HomeAssistant, config: ConfigType) -> bool:
         """Stuff to do when Home Assistant starts."""
         hass.bus.listen_once(EVENT_HOMEASSISTANT_STOP, cleanup_gpio)
 
-    hass.bus.listen_once(EVENT_HOMEASSISTANT_START, prepare_gpio)
+    # hass.bus.listen_once(EVENT_HOMEASSISTANT_START, prepare_gpio)
     GPIO.setmode(GPIO.BCM)
     return True
 
